@@ -1,0 +1,5 @@
+nano -> Untuk buka file
+rm -> menghapus file
+cd -> masuk ke direktori
+cd .. -> keluar dari direktori
+
