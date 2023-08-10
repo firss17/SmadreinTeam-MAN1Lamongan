@@ -1,3 +1,3 @@
 git add .
 git commit -m "komen"
-git psuh origin main
+git psuh origin maingi
