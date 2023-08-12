@@ -122,7 +122,7 @@ if __name__ == "__main__":
             print(str_payload)
             time.sleep(2)
         
-            client = paho.Client("client1", json.dumps(dict_payload["voltage 1", indent = 2])) #client ID name
+            client = paho.Client("client1", json.dumps(dict_payload["voltage 1"], indent=2)) #client ID name
             client.username_pw_set(username=username, password=password)
             client.on_connect = on_connect
             client.on_publish = on_publish
