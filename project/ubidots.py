@@ -12,7 +12,7 @@ username = 'BBFF-YxKin1FIVR21bg9qnIa0IVfbeQOTzC'
 password = ''
 # topic = "test_topic/1"
 #topic = "test_topic/<api-labeldevice>"
-topic = "/v2.0/devices/si-poco"
+topic = "/devices/si-poco"
 # mesin_topic = "/v2.0/devices/raspi/mesin"
 
 def on_connect(client, userdata, flag, rc):

@@ -67,5 +67,5 @@ if __name__ == "__main__":
         print(e)
     finally:
         master1.close()
-        master2.close()
+        master2.close() 
 
