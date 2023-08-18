@@ -60,7 +60,7 @@ if __name__ == "__main__":
     try:
         # Connect to the slave
         serial1 = serial.Serial(
-                               port='/dev/ttyS0',
+                               port='/dev/ttyUSB0',
                                baudrate=9600,
                                bytesize=8,
                                parity='N',
@@ -68,22 +68,22 @@ if __name__ == "__main__":
                                xonxoff=0
                               )
 
-        serial2 = serial.Serial(
-                               port='/dev/ttyS0',
-                               baudrate=9600,
-                               bytesize=8,
-                               parity='N',
-                               stopbits=1,
-                               xonxoff=0
-                              )
+        # serial2 = serial.Serial(
+        #                        port='/dev/ttyUSB0',
+        #                        baudrate=9600,
+        #                        bytesize=8,
+        #                        parity='N',
+        #                        stopbits=1,
+        #                        xonxoff=0
+        #                       )
 
         master1 = modbus_rtu.RtuMaster(serial1)
 
-        master2 = modbus_rtu.RtuMaster(serial2)
+        # master2 = modbus_rtu.RtuMaster(serial2)
         master1.set_timeout(2.0)
         master1.set_verbose(True)
-        master2.set_timeout(2.0)
-        master2.set_verbose(True)
+        # master2.set_timeout(2.0)
+        # master2.set_verbose(True)
         # Changing power alarm value to 100 W
         # master.execute(1, cst.WRITE_SINGLE_REGISTER, 1, output_value=100)
         dict_payload = dict()
@@ -91,11 +91,11 @@ if __name__ == "__main__":
         client.username_pw_set(username=username, password=password)
         client.on_connect = on_connect
         client.on_publish = on_publish
-        client.on_message = on_message
+        # client.on_message = on_message
         client.connect(broker, port, timeout)
         while True:
             data1 = master1.execute(1, cst.READ_INPUT_REGISTERS, 0, 10)
-            data2 = master2.execute(1, cst.READ_INPUT_REGISTERS, 0, 10)
+            # data2 = master2.execute(1, cst.READ_INPUT_REGISTERS, 0, 10)
             # motor_on(channelkipas)
             # time.sleep(1)
             # motor_off(channelkipas)
@@ -138,5 +138,5 @@ if __name__ == "__main__":
         print(e)
     finally:
         master1.close()
-        master2.close() 
+        # master2.close() 
 
