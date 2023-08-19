@@ -91,6 +91,7 @@ if __name__ == "__main__":
         client.username_pw_set(username=username, password=password)
         client.on_connect = on_connect
         client.on_publish = on_publish
+        
         # client.on_message = on_message
         client.connect(broker, port, timeout)
         while True:

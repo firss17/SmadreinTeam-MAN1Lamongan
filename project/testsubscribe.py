@@ -14,7 +14,7 @@ username = 'BBFF-GUCBVft9z4iaICE0uKzbl6kyhDFmiB'
 password = ''
 # topic default "/v2.0/devices/label-devices"
 publish = "/v2.0/devices/sipoco"
-subscribe = "/v2.0/devices/sipoco/#"
+subscribe = "/v2.0/devices/sipoco"
 # topic devices + label yang akan di suscribe
 current1 = "/v2.0/devices/sipoco/current-1_a"
 energy1 = "/v2.0/devices/sipoco/energy-1_wh"
