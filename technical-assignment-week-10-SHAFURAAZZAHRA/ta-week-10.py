@@ -3,8 +3,8 @@ import requests
 import math
 import random
 
-TOKEN = "BBFF-rbCRLrko7y2A1pJ6VP5MmGB1SxZLEp"  # Put your TOKEN here
-DEVICE_LABEL = "cobaubi"  # Put your device label here 
+TOKEN = "BBFF-TWw5OGu9XF19UM6K7ZFm1btr15gEKA"  # Put your TOKEN here
+DEVICE_LABEL = "shafuraadashboard"  # Put your device label here 
 VARIABLE_LABEL_1 = "temperature"  # Put your first variable label here
 VARIABLE_LABEL_2 = "humidity"  # Put your second variable label here
 VARIABLE_LABEL_3 = "position"  # Put your second variable label here
