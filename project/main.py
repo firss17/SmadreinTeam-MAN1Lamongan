@@ -19,6 +19,7 @@ password = ''
 topic = "/v2.0/devices/sipoco"
 # mesin_topic = "/v2.0/devices/raspi/mesin"
 
+
 # channelkipas = 23
 # channellampu = 24
 
@@ -110,7 +111,6 @@ if __name__ == "__main__":
             dict_payload["current-1_a"] = (data1[1] + (data1[2] << 16)) / 1000.0 # [A]
             dict_payload["power-1_w"] = (data1[3] + (data1[4] << 16)) / 10.0 # [W]
             dict_payload["energy-1_wh"] = data1[5] + (data1[6] << 16) # [Wh]
-<<<<<<< HEAD
             str_payload = json.dumps(dict_payload, indent=2)
 
             dict_payload["voltage-2"]= data2[0] / 10.0
@@ -118,29 +118,10 @@ if __name__ == "__main__":
             dict_payload["power-2_w"] = (data2[3] + (data2[4] << 16)) / 10.0 # [W]
             dict_payload["energy-2_wh"] = data2[5] + (data2[6] << 16) # [Wh]
             str_payload = json.dumps(dict_payload, indent=2) 
-=======
-            dict_payload["frequency-1_hz"] = data1[7] / 10.0 # [Hz]
-            dict_payload["powerfactor-1_"] = data1[8] / 100.0
-            dict_payload["alarm-1"] = data1[9] # 0 = no alarm
-            str_payload = json.dumps(dict_payload, indent=2)
-
-            # dict_payload["voltage2"]= data2[0] / 10.0
-            # dict_payload["current2_A"] = (data2[1] + (data2[2] << 16)) / 1000.0 # [A]
-            # dict_payload["power2_W"] = (data2[3] + (data2[4] << 16)) / 10.0 # [W]
-            # dict_payload["energy2_Wh"] = data2[5] + (data2[6] << 16) # [Wh]
-            # dict_payload["frequency2_Hz"] = data2[7] / 10.0 # [Hz]
-            # dict_payload["power2_factor"] = data2[8] / 100.0
-            # dict_payload["alarm2"] = data2[9] # 0 = no alarm
-            # str_payload = json.dumps(dict_payload, indent=2)
->>>>>>> b9a2eb690a934486937acc7cdda84e6eb285c51f
             print(str_payload)
             # time.sleep(2)
             client.publish(topic,str_payload,qos=1)
             time.sleep(10)
-<<<<<<< HEAD
-=======
-           
->>>>>>> b9a2eb690a934486937acc7cdda84e6eb285c51f
             # GPIO.cleanup()#co
         
 
@@ -151,7 +132,3 @@ if __name__ == "__main__":
     finally:
         master1.close()
         # master2.close() 
-<<<<<<< HEAD
-=======
-
->>>>>>> b9a2eb690a934486937acc7cdda84e6eb285c51f
